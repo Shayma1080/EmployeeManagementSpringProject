@@ -42,8 +42,10 @@ public class EmployeeController {
         employeeService.deleteEmployee(id);
     }
 
+    //DTO
+
     @GetMapping("/dto")
-    public List<EmployeeDTO> getAllEmployeesDTO() {
+    public List<EmployeeDTO> getAllEmployeeDTO() {
         return employeeService.getAllEmployeesDTO();
     }
 
