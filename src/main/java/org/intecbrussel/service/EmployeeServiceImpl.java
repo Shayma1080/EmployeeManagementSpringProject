@@ -63,9 +63,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     public List<EmployeeDTO> getAllEmployeesDTO() {
-        return getAllEmployees().stream()
-                .map(this::convertToDTO)
-                .collect(Collectors.toList());
+        return getAllEmployees().stream() // Ze haalt alle Employees op via getAllEmplyees(), loopt de lijst door met .stream()
+                .map(this::convertToDTO) // ze roept convertToDTO() voor elk item in lijst -> 1 voor 1
+                .collect(Collectors.toList()); // Ze verzamelt alle DTO's in een List<EmployeeDTO>
     }
 
     public Employee saveEmployeeFromDTO(EmployeeDTO employeeDTO) {
